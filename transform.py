@@ -9,11 +9,11 @@ df_products["title"] = df_products["title"].str.strip()
 df_products["price"] = df_products["price"].astype(float)
 
 # Clean users data
-df_users["name"] = df_users["name"].apply(lambda x: f"{x['firstname']} {x['lastname']}" if isinstance(x, dict) else x)
+
 
 # Create dimension tables
 dim_products = df_products[["id", "title", "category", "price"]].rename(columns={"id": "product_id"})
-dim_users = df_users[["id", "name", "email"]].rename(columns={"id": "user_id"})
+dim_users = df_users.rename(columns={"id": "user_id"})
 
 # Example fact table (sales simulation)
 fact_sales = pd.DataFrame({
