@@ -2,14 +2,17 @@ import requests
 import pandas as pd
 
 # Extract products from Fake Store API
-products_url = "https://fakestoreapi.com/products"
-products = requests.get(products_url).json()
+products_url = "https://dummyjson.com/products"
+respuesta_products = requests.get(products_url)
+print(respuesta_products.status_code)
+products = respuesta_products.json()["products"]
 df_products = pd.DataFrame(products)
 df_products.to_csv("data/products.csv", index=False)
+users_url = "https://dummyjson.com/users"
 
 # Extract users from Fake Store API
-users_url = "https://fakestoreapi.com/users"
-users = requests.get(users_url).json()
+respuesta_usuarios = requests.get(users_url)
+users = respuesta_usuarios.json()["users"]
 df_users = pd.DataFrame(users)
 df_users.to_csv("data/users.csv", index=False)
 
