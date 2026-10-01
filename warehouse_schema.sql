@@ -1,20 +1,18 @@
 CREATE TABLE dim_products (
     product_id INT PRIMARY KEY,
-    title VARCHAR(255),
-    category VARCHAR(100),
-    price NUMERIC
+	title VARCHAR(255),
+	category VARCHAR(255),
+	price DECIMAL(10,2)
 );
 
 CREATE TABLE dim_users (
     user_id INT PRIMARY KEY,
-    name VARCHAR(255),
-    email VARCHAR(255)
+	username VARCHAR(255),
+	email VARCHAR(255)
 );
 
 CREATE TABLE fact_sales (
     sale_id INT PRIMARY KEY,
-    product_id INT REFERENCES dim_products(product_id),
-    user_id INT REFERENCES dim_users(user_id),
-    quantity INT,
-    total_amount NUMERIC
-);
+	product_id INT,
+	user_id INT,
+	quan
