@@ -1,12 +1,12 @@
 # Data Warehouse ETL Project - E-commerce Simulation
 
 ## Description
-This project implements a complete **ETL (Extract, Transform, Load)** pipeline and simulates the construction of a **data warehouse** using the public [Fake Store API](https://fakestoreapi.com/).  
+This project implements a complete **ETL (Extract, Transform, Load)** pipeline and simulates the construction of a **data warehouse** using the public [DummyJSON API](https://DummyJSON.com/).  
 The goal is to demonstrate how a data engineer can integrate multiple data sources, apply business rules, and design a dimensional model for analytics in the e-commerce domain.
 
 ## Project Objectives
 - **Extract:**  
-  - Download product, category, and user data from the Fake Store API.  
+  - Download product, category, and user data from the DummyJSON API.  
   - Integrate external CSV files simulating sales transactions.  
 
 - **Transform:**  
@@ -35,7 +35,7 @@ The goal is to demonstrate how a data engineer can integrate multiple data sourc
 
 ## Expected Results
 - A **PostgreSQL database** with dimension and fact tables ready for analytics.  
-- A **clean CSV dataset** (`productos_limpios.csv`, `ventas.csv`) for quick inspection.  
+- A **clean CSV dataset** (`products.csv`, `users.csv`) for quick inspection.  
 - Example queries to calculate KPIs such as total revenue per category, average margin, and top-selling products.  
 
 ## Next Steps
